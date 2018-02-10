@@ -1,16 +1,17 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="index.aspx.cs" Inherits="index" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AngelHelpers.master" AutoEventWireup="true" CodeFile="Index.aspx.cs" Inherits="_Default" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+</asp:Content>
+<asp:Content ID="ContentPlaceHolderLogin" ContentPlaceHolderID="ContentPlaceHolderLogin" runat="server">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-        </div>
-    </form>
-</body>
-</html>
+
+
+    <asp:Button runat="server" ID="btnRegistro" CssClass="btn btn-outline-primary" PostBackUrl="~/Login.aspx" Text="Acceder" />
+    <asp:Button runat="server" CssClass="btn btn-outline-info" PostBackUrl="~/registro.aspx" Text="Registrarse" />
+
+
+
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+</asp:Content>
+
