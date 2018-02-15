@@ -15,7 +15,7 @@
                             <h5 class="card-title">Añade aptitudes a tu curriculum</h5>
                             <p class="card-text">
                                 Muchas empresas filtran candidatos por Idiomas o por especialidad actualiza tu 
-                            currículum para ser más accesible a las empresas que buscan candidatos
+                                 currículum para ser más accesible a las empresas que buscan candidatos
                             </p>
                             <a href="#" class="btn btn-primary">Go somewhere</a>
                         </div>

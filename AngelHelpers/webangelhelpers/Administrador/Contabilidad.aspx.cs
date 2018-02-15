@@ -1,21 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class Administrador_administrarEmpresas : System.Web.UI.Page
+public partial class Administrador_Contabilidad : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
-    {
-
-    }
-
-
-
-    protected void grdEmpresas_SelectedIndexChanged(object sender, EventArgs e)
     {
         
     }

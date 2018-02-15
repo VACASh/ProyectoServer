@@ -8,6 +8,7 @@ using System.Web.UI.WebControls;
 
 public partial class Login : System.Web.UI.Page
 {
+    static string idUser;
     protected void Page_Load(object sender, EventArgs e)
     {
 
@@ -34,6 +35,7 @@ public partial class Login : System.Web.UI.Page
             SqlDataReader reader = comando.ExecuteReader();
             if (reader.Read())
             {
+               
                 Session.Add("idUsuario", reader.GetString(0));
                 Session.Add("idRol", reader.GetString(1));
 
