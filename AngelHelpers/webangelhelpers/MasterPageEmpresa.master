@@ -1,0 +1,62 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageEmpresa.master.cs" Inherits="MasterPageEmpresa" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+     <link rel="stylesheet" type="text/css" href="css/general.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
+        integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <style>
+        .navborde{
+            border:none;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+          <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-danger">
+                <a class="navbar-brand" href="#">Angel Helpers</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link btn btn-outline-info my-2 my-sm-0 navborde" href="RevisarOfertas.aspx">Revisas ofertas <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-outline-info my-2 my-sm-0 navborde" href="administrarEmpresas.aspx">Administrar empresas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-outline-info my-2 my-sm-0 navborde" href="administrarCandidatos.aspx">Administrar Candidatos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-outline-info my-2 my-sm-0 navborde " href="Denuncias.aspx">Consulta de denuncias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-outline-info my-2 my-sm-0 navborde" href="Contabilidad.aspx">Contabilidad</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+
+                       
+                    </form>
+                </div>
+            </nav>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

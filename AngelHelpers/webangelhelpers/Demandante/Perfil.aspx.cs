@@ -19,7 +19,7 @@ public partial class Demandante_Default : Page
         if (!IsPostBack)
         {
 
-            sesion = Session["idUsuario"].ToString();
+           sesion = Session["idUsuario"].ToString();
            
     
 
