@@ -175,16 +175,11 @@
                                         <asp:Button runat="server" CssClass="btn btn-outline-info btn-lg" Text="Registrarse" PostBackUrl="~/registro.aspx" />
                                     </div>
 
-
-
-
-
-
                                 </LayoutTemplate>
                             </asp:Login>
                             <br />
                             <br />
-                            <div>
+                            <div class="text-center">
                                 <asp:Label ID="lblMensajes" runat="server" ForeColor="Red"></asp:Label>
                             </div>
                         </div>

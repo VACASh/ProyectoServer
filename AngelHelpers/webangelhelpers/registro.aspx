@@ -205,7 +205,7 @@
                                     </div>
                                     <div class="input-group">
                                         <asp:DropDownList ID="especialidad" CssClass="form-control margenbot" runat="server">
-                                            <asp:ListItem Selected="True" Text="Ninguna" Value="ninguna"></asp:ListItem>
+                                            <asp:ListItem Selected="True" Text="Ninguna" Value="Ninguna"></asp:ListItem>
                                             <asp:ListItem Text="Alzhemier" Value="alzhemier"></asp:ListItem>
                                             <asp:ListItem Text="Minusvalía" Value="minusvalia"></asp:ListItem>
                                             <asp:ListItem Text="Parkinson" Value="parkinson"></asp:ListItem>
