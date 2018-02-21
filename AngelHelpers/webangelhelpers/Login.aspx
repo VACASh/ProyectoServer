@@ -161,7 +161,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <asp:CheckBox ID="RememberMe" runat="server" Text="Recordárme la próxima vez." />
+                                   
                                     <div style="color: #dc3545">
                                         <p>
                                             <asp:Literal ID="FailureText" runat="server" EnableViewState="False"></asp:Literal>

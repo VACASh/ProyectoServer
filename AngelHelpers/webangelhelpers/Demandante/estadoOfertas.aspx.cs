@@ -12,6 +12,12 @@ public partial class Demandante_estadoOfertas : System.Web.UI.Page
     static int idDemandante;
     protected void Page_Load(object sender, EventArgs e)
     {
+       
+        if (Convert.ToString(Session["idRol"]) != "demandante")
+        {
+            Response.Redirect("~/Index.aspx");
+        }
+        lblTipoUser.Text = Convert.ToString(Session["idRol"]);
 
         if (!IsPostBack)
         {

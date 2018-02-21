@@ -2,8 +2,12 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
+<asp:Content ID="contentnav" ContentPlaceHolderID="nav" runat="server">
+     <asp:Label ID="lblDatosUsuario" runat="server" ForeColor="#bd2130"></asp:Label>
+</asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="container">
+       
         <div class="card">
             <div class="card-header">
                 <h2 class="h2">Revisión de ofertas de empleo</h2>
@@ -86,8 +90,7 @@
                             <ItemStyle HorizontalAlign="Center" />
                         </asp:CheckBoxField>
                         <asp:CommandField ShowEditButton="True">
-                            <HeaderStyle CssClass="d-none d-md-table-cell"></HeaderStyle>
-                            <ItemStyle CssClass="d-none d-md-table-cell"></ItemStyle>
+                            
                             <ControlStyle CssClass="btn btn-outline-primary" />
                         </asp:CommandField>
                     </Columns>
@@ -101,7 +104,7 @@
                             </div>
                         </div>
                     </EmptyDataTemplate>      
-                    <HeaderStyle BackColor="#17A2B8" Font-Size="Small"></HeaderStyle>
+                    <HeaderStyle BackColor="#17a2b8" Font-Size="Small"></HeaderStyle>
                     <PagerSettings FirstPageText="Prímera" LastPageText="Última" NextPageText="Siguiente" PreviousPageText="Anterior" Mode="NextPreviousFirstLast" />
                     <PagerStyle HorizontalAlign="Center" VerticalAlign="Bottom" />
                 </asp:GridView>

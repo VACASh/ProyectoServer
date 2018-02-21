@@ -13,9 +13,15 @@ public partial class Demandante_Default : Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
+       
+       
 
+        if (Convert.ToString(Session["idRol"]) != "demandante")
+        {
+            Response.Redirect("~/Index.aspx");
+        }
 
-
+        lblTipoUser.Text = Convert.ToString(Session["idRol"]);
         if (!IsPostBack)
         {
 
@@ -113,7 +119,7 @@ public partial class Demandante_Default : Page
             comando.Connection.Close();
             if (inRegistrosAfectados == 1)
             {
-                lblMensajes.Text = "Registro insertado correctamente";
+                lblActualuizar.Text = "Perfil actualizado";
 
                 listIdiomas.DataBind();
             }
@@ -155,7 +161,10 @@ public partial class Demandante_Default : Page
             Int32 inRegistrosAfectados = comando.ExecuteNonQuery();
             comando.Connection.Close();
             if (inRegistrosAfectados == 1)
-                lblMensajes.Text = "Registro insertado correctamente";
+            {
+                Session["idRol"] = "null";
+                    Response.Redirect("~/Index.aspx");
+            }
             else
                 lblMensajes.Text = "Error al desactivar  el usuario";
 
@@ -199,7 +208,7 @@ public partial class Demandante_Default : Page
                 comando.Connection.Close();
                 if (inRegistrosAfectados == 1)
                 {
-                    lblMensajes.Text = "Registro insertado correctamente";
+                    lblActualuizar.Text = "Perfil actualizado";
 
                     listIdiomas.DataBind();
                 }
@@ -234,7 +243,7 @@ public partial class Demandante_Default : Page
                 comando.Connection.Close();
                 if (inRegistrosAfectados == 1)
                 {
-                    lblMensajes.Text = "Registro insertado correctamente";
+                    lblActualuizar.Text = "Perfil actualizado";
 
                     listIdiomas.DataBind();
                 }

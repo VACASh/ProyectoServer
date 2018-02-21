@@ -7,6 +7,9 @@
         }
     </style>
 </asp:Content>
+<asp:Content ID="contentnav" ContentPlaceHolderID="nav" runat="server">
+     <asp:Label ID="lblDatosUsuario" runat="server" ForeColor="#bd2130"></asp:Label>
+</asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="container">
         <div class="row">
@@ -14,6 +17,7 @@
                 <div class="card-header">
                     <h5 class="h5">Desglose total gastado por cada empresa</h5>
                 </div>
+               
                 <div class="card-body">
                     <asp:GridView ID="GridView1" runat="server" CssClass="table table-striped table-bordered table-hover" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" style="font-size: small">
                         <Columns>

@@ -11,4 +11,11 @@ public partial class AngelHelpers : System.Web.UI.MasterPage
     {
 
     }
+
+    protected void Unnamed1_Click(object sender, EventArgs e)
+    {
+        Session.Clear();
+        Session.Abandon();
+        Response.Redirect("~/Index.aspx");
+    }
 }

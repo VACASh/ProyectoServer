@@ -3,6 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderLogin" runat="Server">
+    <asp:Label runat="server" ID="lblTipoUser"></asp:Label>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
 
@@ -12,7 +13,7 @@
             </h4>
             <div class="row">
                 <asp:TextBox runat="server" ID="txtBusqueda" CssClass="col-sm-7 form-control">  </asp:TextBox>&nbsp;
-                <asp:Button runat="server" CssClass="btn col-sm-4 text-center" Text="Buscar ofertas" />
+                <asp:Button runat="server" CssClass="btn col-sm-4 text-center" Text="Buscar ofertas" OnClick="Unnamed1_Click" />
             </div>
             <asp:Label ID="lblMensaje" CssClass="text-center" ForeColor="Red" runat="server"></asp:Label>
         </div>
@@ -24,7 +25,7 @@
 
                 <asp:GridView ID="GridView1" runat="server" CssClass="table table-striped table-bordered table-hover" DataSourceID="SqlDataSource1" AutoGenerateColumns="False" DataKeyNames="idOferta" AllowPaging="True" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" PageSize="5">
                     <Columns>
-                        <asp:CommandField ShowSelectButton="True">
+                        <asp:CommandField ShowSelectButton="True" SelectText="Inscribirse en oferta">
                             <ControlStyle CssClass="btn btn-success" />
 
                         </asp:CommandField>
@@ -78,7 +79,7 @@
             </div>
         </div>
 
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT OfertaEmpleo.idOferta, OfertaEmpleo.tipoOferta, OfertaEmpleo.descripcion, OfertaEmpleo.ciudad, OfertaEmpleo.perNecesarias, OfertaEmpleo.Especialidad, Empresa.nomEmpresa FROM OfertaEmpleo INNER JOIN Empresa ON OfertaEmpleo.idEmpresa = Empresa.idEmpresa WHERE (OfertaEmpleo.ciudad = @ciudad) OR (OfertaEmpleo.Especialidad = @Especialidad)">
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT OfertaEmpleo.idOferta, OfertaEmpleo.tipoOferta, OfertaEmpleo.descripcion, OfertaEmpleo.ciudad, OfertaEmpleo.perNecesarias, OfertaEmpleo.Especialidad, Empresa.nomEmpresa FROM OfertaEmpleo INNER JOIN Empresa ON OfertaEmpleo.idEmpresa = Empresa.idEmpresa WHERE (OfertaEmpleo.ciudad = @ciudad) AND (OfertaEmpleo.Revisada = 1) OR (OfertaEmpleo.Especialidad = @Especialidad) AND (OfertaEmpleo.Revisada = 1)">
             <SelectParameters>
                 <asp:ControlParameter ControlID="txtBusqueda" Name="ciudad" PropertyName="Text" />
                 <asp:ControlParameter ControlID="txtBusqueda" Name="Especialidad" PropertyName="Text" />

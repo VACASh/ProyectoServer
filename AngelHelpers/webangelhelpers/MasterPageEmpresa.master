@@ -4,59 +4,61 @@
 
 <html>
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
-    <asp:ContentPlaceHolder id="head" runat="server">
-
+    <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-     <link rel="stylesheet" type="text/css" href="css/general.css" />
+    <link rel="stylesheet" type="text/css" href="css/general.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
         integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
     <style>
-        .navborde{
-            border:none;
+        .navborde {
+            border: none;
         }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-          <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-danger">
-                <a class="navbar-brand" href="#">Angel Helpers</a>
+        <div>
+            <nav class="navbar  navbar-expand-lg navbar-dark " style="background-color:#563d7c">
+                <a class="navbar-brand" href="IndexEmpresa.aspx">AngelHelpers</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link btn btn-outline-info my-2 my-sm-0 navborde" href="RevisarOfertas.aspx">Revisas ofertas <span class="sr-only">(current)</span></a>
+                        <li class="nav-item ">
+                            <a class="nav-link  my-2 my-sm-0 " href="revisarOfertasEmpresa.aspx">Revisar ofertas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link btn btn-outline-info my-2 my-sm-0 navborde" href="administrarEmpresas.aspx">Administrar empresas</a>
+                            <a class="nav-link  my-2 my-sm-0 " href="gestionCandidatos.aspx">Revisar Candidatos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link btn btn-outline-info my-2 my-sm-0 navborde" href="administrarCandidatos.aspx">Administrar Candidatos</a>
+                            <a class="nav-link  my-2 my-sm-0 " href="filtrarCandidatos.aspx">Filtrar candidatos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link btn btn-outline-info my-2 my-sm-0 navborde " href="Denuncias.aspx">Consulta de denuncias</a>
+                            <a class="nav-link  my-2 my-sm-0 " href="publicarOferta.aspx">Nueva oferta</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link btn btn-outline-info my-2 my-sm-0 navborde" href="Contabilidad.aspx">Contabilidad</a>
+                            <a class="nav-link my-2 my-sm-0 " href="PerfilEmpresa.aspx">Perfil</a>
                         </li>
-                    </ul>
-                    <form class="form-inline my-2 my-lg-0">
 
-                       
-                    </form>
+                    </ul>
+                    <asp:ContentPlaceHolder ID="infoUser" runat="server" >
+                    </asp:ContentPlaceHolder>
+                    &nbsp;
+                    <asp:Button runat="server" ID="btnSalir" CssClass="btn btn-danger" Text="Salir" OnClientClick="return confirm('Seguro desea salir?');" OnClick="btnSalir_Click" />
                 </div>
             </nav>
-        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
-        
-        </asp:ContentPlaceHolder>
-    </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+
     </form>
 </body>
 </html>

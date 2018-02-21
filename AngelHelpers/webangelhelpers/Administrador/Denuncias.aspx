@@ -2,9 +2,14 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
+<asp:Content ID="contentnav" ContentPlaceHolderID="nav" runat="server">
+     <asp:Label ID="lblDatosUsuario" runat="server" ForeColor="#bd2130"></asp:Label>
+</asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="container">
+       
         <div class="card">
+
             <div class="card-header">
                 <h2 class="h2">Denuncias de ofertas de empleo</h2>
                 <asp:Label runat="server">Revisión de las denuncias realizadas por usuarios a una oferta de empleo falsa u ofensiva</asp:Label>

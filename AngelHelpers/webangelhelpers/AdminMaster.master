@@ -21,37 +21,38 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-                <a class="navbar-brand" href="#">Angel Helpers</a>
+            <nav class="navbar  navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="MenuAdmin.aspx">AngelHelpers</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link btn btn-outline-info my-2 my-sm-0 navborde" href="RevisarOfertas.aspx">Revisas ofertas <span class="sr-only">(current)</span></a>
+                    <ul class="navbar-nav mr-auto">                      
+                        <li class="nav-item ">
+                            <a class="nav-link  my-2 my-sm-0 " href="RevisarOfertas.aspx">Revisar ofertas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link btn btn-outline-info my-2 my-sm-0 navborde" href="administrarEmpresas.aspx">Administrar empresas</a>
+                            <a class="nav-link  my-2 my-sm-0 " href="administrarEmpresas.aspx">Admin empresas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link btn btn-outline-info my-2 my-sm-0 navborde" href="administrarCandidatos.aspx">Administrar Candidatos</a>
+                            <a class="nav-link  my-2 my-sm-0 " href="administrarCandidatos.aspx">Admin Candidatos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link btn btn-outline-info my-2 my-sm-0 navborde " href="Denuncias.aspx">Consulta de denuncias</a>
+                            <a class="nav-link my-2 my-sm-0  " href="Denuncias.aspx">Denuncias</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link btn btn-outline-info my-2 my-sm-0 navborde" href="Contabilidad.aspx">Contabilidad</a>
+                            <a class="nav-link my-2 my-sm-0 " href="Contabilidad.aspx">Contabilidad</a>
                         </li>
                     </ul>
-                    <form class="form-inline my-2 my-lg-0">
-
-                       
-                    </form>
+                    
+                    <asp:ContentPlaceHolder ID="nav" runat="server"></asp:ContentPlaceHolder>&nbsp;
+                    <asp:Button runat="server" ID="btnSalir" Text="Salir" CssClass="btn btn-danger" OnClientClick="return confirm('Seguro desea salir?');" OnClick="btnSalir_Click" />
                 </div>
             </nav>
+            
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                
             </asp:ContentPlaceHolder>
         </div>
     </form>

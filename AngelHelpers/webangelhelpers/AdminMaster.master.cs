@@ -11,4 +11,11 @@ public partial class AdminMaster : System.Web.UI.MasterPage
     {
 
     }
+
+    protected void btnSalir_Click(object sender, EventArgs e)
+    {
+        Session.Clear();
+        Session.Abandon();
+        Response.Redirect("~/Index.aspx");
+    }
 }

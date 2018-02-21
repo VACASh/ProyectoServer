@@ -2,7 +2,11 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
+<asp:Content ID="contentnav" ContentPlaceHolderID="nav" runat="server">
+     <asp:Label ID="lblDatosUsuario" runat="server" ForeColor="#bd2130"></asp:Label>
+</asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+
     <div class="container">
         <div class="card">
             <div class="card-header">
@@ -37,8 +41,16 @@
                 </asp:SqlDataSource>
                 <asp:GridView runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" AllowPaging="True" CssClass="table table-striped table-bordered table-hover" PageSize="5" DataKeyNames="idDemandante" Style="font-size: small">
                     <Columns>
+                        <asp:BoundField DataField="idDemandante" HeaderText="ID Demandante" SortExpression="idDemandante" InsertVisible="False" ReadOnly="True">
+                            <ControlStyle CssClass="form-control" />
+                            <HeaderStyle CssClass="d-none "></HeaderStyle>
+                            <ItemStyle CssClass="d-none "></ItemStyle>
+                        </asp:BoundField>
+
                         <asp:BoundField DataField="idUsuario" HeaderText="ID" SortExpression="idUsuario">
                             <ControlStyle CssClass="form-control" />
+                            <HeaderStyle CssClass="d-none "></HeaderStyle>
+                            <ItemStyle CssClass="d-none "></ItemStyle>
                         </asp:BoundField>
                         <asp:BoundField DataField="nombre" HeaderText="Nombre" SortExpression="nombre">
                             <ControlStyle CssClass="form-control" />
@@ -68,11 +80,6 @@
                             <ControlStyle CssClass="form-control" />
                             <HeaderStyle CssClass="d-none d-xl-table-cell"></HeaderStyle>
                             <ItemStyle CssClass="d-none d-xl-table-cell"></ItemStyle>
-                        </asp:BoundField>
-                        <asp:BoundField DataField="idDemandante" HeaderText="ID Demandante" SortExpression="idDemandante" InsertVisible="False" ReadOnly="True">
-                            <ControlStyle CssClass="form-control" />
-                            <HeaderStyle CssClass="d-none "></HeaderStyle>
-                            <ItemStyle CssClass="d-none "></ItemStyle>
                         </asp:BoundField>
 
                         <asp:CommandField ShowEditButton="True">
